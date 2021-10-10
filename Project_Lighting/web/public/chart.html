@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="A frontend dashboard for the TrackMe application" />
+    <meta name="author" content="Devices" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeJS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+    <script src="https://unpkg.com/@mongodb-js/charts-embed-dom@beta"></script>
+
+  </head>
+  <style>
+    .body-content {
+  border: 3px solid rgb(0, 0, 0);
+  padding: 1rem;
+}
+.body-content{
+  display: flex;
+}
+.flex-child{
+  flex: 1;
+}
+  </style>
+  <body>
+    <h1>Dashboard</h1>
+    <br>
+
+  <div class="body-content">
+        <div class='flex-child'>
+  
+          <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-sit314-project-svnrf/embed/charts?id=87bdc613-3672-4bbf-bb80-9baced74646c&autoRefresh=10&theme=light"></iframe>
+      </div>
+
+      
+      <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-sit314-project-svnrf/embed/charts?id=3f0c001d-440f-4811-86d7-21df32096f17&autoRefresh=10&theme=light"></iframe>
+        
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+    </body>
+</html>
+
