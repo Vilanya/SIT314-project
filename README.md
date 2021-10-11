@@ -1,5 +1,6 @@
-# assignment2
-SIT223 - Assignment 2
+SIT314 - Final Project
+
+- Make sure that the Arduino is connected to the computer and a Standard Firmata is uploaded onto it.
 
 Step 1: Install nodejs, express.
 
