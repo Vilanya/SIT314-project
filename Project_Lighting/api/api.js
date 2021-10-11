@@ -33,6 +33,23 @@ app.get('/api/test', (req, res) => {
  res.send('The API is working!');
 });
 
+/**
+* @api {get} /api/data Data An array of all data 
+* @apiGroup Data
+* @apiSuccessExample {json} Success-Response:
+*   [ 
+*       {
+*           "_id": "dsohsdohsdofhsofhosfhsofh",
+*           "id": "0",
+*           "sensorData": "20",
+*           "time": "xx:xx:xx"
+*       }
+*   ]
+* @apiErrorExample {json} Error-Response: 
+*   {
+*       "Error" 
+*   }
+*/
 app.get('/api/data', (req, res) => { 
     Sensor.find({}, (err, sensordata) => {
         return err
@@ -41,6 +58,18 @@ app.get('/api/data', (req, res) => {
     }); 
 });
 
+/**
+* @api {post} /api/authenticate User Login
+* @apiGroup User
+* @apiSuccessExample {json} Success-Response:
+*   { 
+*       user: "Kev", password: '****'
+*   }
+* @apiErrorExample {json} Error-Response: 
+*   {
+*       "No user found" 
+*   }
+*/
 app.post('/api/authenticate', (req, res) => { 
     const { user, password } = req.body; 
     User.findOne({
@@ -68,6 +97,18 @@ app.post('/api/authenticate', (req, res) => {
     
 });
 
+/**
+* @api {post} /api/registration User Register
+* @apiGroup User
+* @apiSuccessExample {json} Success-Response:
+*   { 
+*       user: "Kev", password: '****', confirm: '****'
+*   }
+* @apiErrorExample {json} Error-Response: 
+*   {
+*       "User already exists" 
+*   }
+*/
 app.post('/api/registration', (req, res) => { 
     const { user, password, isAdmin } = req.body; 
     User.findOne({
@@ -99,7 +140,6 @@ app.post('/api/registration', (req, res) => {
     }); 
     
 });
-
 
 
 app.listen(port, () => {

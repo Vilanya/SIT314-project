@@ -30,6 +30,19 @@ client.on('connect', () => {
     console.log('mqtt connected');
 });
 
+/**
+* @api {post} /send-command Command send on command
+* @apiGroup Command
+* @apiSuccessExample {json} Success-Response:
+*   { 
+*       "published new message"
+*   }
+* @apiErrorExample {json} Error-Response: 
+*   {
+*       "Error" 
+*   }
+*/
+
 app.post('/send-command', (req, res) => { 
     const {command} = req.body; 
     const topic = `/218664185/command`; 
@@ -39,6 +52,18 @@ app.post('/send-command', (req, res) => {
     });
 });
 
+/**
+* @api {post} /light-on Command send light command
+* @apiGroup Command
+* @apiSuccessExample {json} Success-Response:
+*   { 
+*       "published new message"
+*   }
+* @apiErrorExample {json} Error-Response: 
+*   {
+*       "Error" 
+*   }
+*/
 app.post('/light-on', (req, res) => { 
     const {command} = req.body; 
     const topic = `/218664185/lights`; 

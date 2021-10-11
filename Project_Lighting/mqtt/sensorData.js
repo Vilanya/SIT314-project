@@ -24,9 +24,12 @@ client.on('message', (topic, message) =>
     
 });
 
+
+
 if (start=true)
 {
   const board = new five.Board();
+  
   board.on('ready', () => {
       const moisturesensor = new five.Sensor({
         pin: 'A0',
@@ -53,7 +56,7 @@ if (start=true)
         
         const newSensor = new Sensor({
             id: sensordata.id,
-            sensordata: sensordata.moisture,
+            sensordata: sensordata.light,
             time: sensordata.time
             
         });

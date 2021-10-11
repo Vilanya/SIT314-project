@@ -1,24 +1,10 @@
 // const students = JSON.parse(localStorage.getItem('students')) || [];
 //var currentStudent = [localStorage.getItem('fname'),localStorage.getItem('lname'),localStorage.getItem('c_name'),localStorage.getItem('tutor')];
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = `http://localhost:5000/api`;
 
 const MQTT_URL = `http://localhost:5001/send-command`;
 
-// import ChartsEmbedSDK from "@mongodb-js/charts-embed-dom";
-
-//         const sdk = new ChartsEmbedSDK({
-//             baseUrl: "https://charts.mongodb.com/charts-embedding-examples-wgffp", // Optional: ~REPLACE~ with the Base URL from your Embed Chart dialog
-//           });
-          
-//           const chart = sdk.createChart({
-//             chartId: "735cfa75-15b8-483a-bc2e-7c6659511c7c", // Optional: ~REPLACE~ with the Chart ID from your Embed Chart dialog
-//             height: "700px",
-            
-//           });
-//           chart.setAutoRefresh(true);
-
-//const isAuthenticated = JSON.parse(localStorage.getItem('isAuthenticated')) || false;
 const currentUser = localStorage.getItem('user');
 
 var sensordata = [];
